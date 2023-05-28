@@ -1,0 +1,11 @@
+kw1
+SELECT `wycieczki`.`id`, `wycieczki`.`dataWyjazdu`, `wycieczki`.`cel`, `wycieczki`.`cena` FROM `wycieczki` WHERE `wycieczki`.`dostepna` = '1';
+
+kw2
+SELECT `zdjecia`.`nazwaPliku`, `zdjecia`.`podpis` FROM `zdjecia` ORDER BY `zdjecia`.`podpis` DESC;
+
+kw3
+SELECT `wycieczki`.`cel`, `wycieczki`.`cena`, `zdjecia`.`podpis` FROM `wycieczki` INNER JOIN `zdjecia` ON `wycieczki`.`zdjecia_id` = `zdjecia`.`id` WHERE `wycieczki`.`cena` > 1200;
+
+kw4
+ALTER TABLE `wycieczki` ADD COLUMN `liczbaDni` int AFTER `dataWyjazdu`;
